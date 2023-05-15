@@ -1,0 +1,15 @@
+version: '3'
+services:
+  helloworld:
+    image: willido/helloworld2
+    build: ./helloworld
+  mynginx:
+    image: willido/mynginx2
+    build: ./mynginx
+    ports:
+    - "5001:80"
+  mycat:
+    image: willido/cat2
+    build: ./cat
+    ports:
+    - "5000:5000"
